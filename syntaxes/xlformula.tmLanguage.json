@@ -1,0 +1,82 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Excel Formula",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#punctuation"
+		}
+	],
+	"repository": {
+		"keywords":{
+			"patterns": [
+				{
+					"name":"keyword.operator.comparison.xlformula",
+					"match": "[=<>]"
+				},
+				{
+					"name": "keyword.operator.arithmetic.xlformula",
+					"match": "[+*/%]"
+				},
+				{
+					"name":"keyword.operator.concatenation.xlformula",
+					"match": "[&]"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name":"support.constant.variable.xlformula",
+					"match": "(?:\\[@\\[?)\\b(\\w+)\\b(?:\\]?\\])"
+				},
+				{
+					"name":"constant.language.xlformula",
+					"match": "\\b(TRUE|FALSE|true|false)\\b"
+				},
+				{
+					"name": "constant.numeric.decimal.xlformula",
+					"match": "(\\d*\\.?\\d+)"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.xlformula",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.xlformula",
+					"match": "\\\\."
+				}
+			]
+		},
+		"functions": {
+			"name": "entity.name.function.xlformula",
+			"match": "\\b([A-Z]\\w*)\\b(?=\\s*\\()"
+		},
+		"variables":{
+			"name":"variable.other.xlformula",
+			"match": "(?:\\$?([a-zA-Z]+)[$]?([0-9]+))|(?:[$]?[0-9]+[:][$]?[0-9]+)|(?:\\$?[a-zA-Z]+[:][$]?[a-zA-Z]+)"
+		},
+		"punctuation": {
+			"name": "punctuation.separator.xlformula",
+			"match": ","
+		}
+	},
+	"scopeName": "source.xlformula"
+}

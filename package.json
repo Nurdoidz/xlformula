@@ -1,0 +1,30 @@
+{
+  "name": "xlformula",
+  "displayName": "ExcelFormula",
+  "description": "Syntax highlighting for Excel formulas.",
+  "publisher": "Nurdoidz",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "Excel",
+    "formula"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "xlformula",
+      "aliases": ["Excel Formula", "xlformula"],
+      "extensions": [".xlformula"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "xlformula",
+      "scopeName": "source.xlformula",
+      "path": "./syntaxes/xlformula.tmLanguage.json"
+    }]
+  }
+}
