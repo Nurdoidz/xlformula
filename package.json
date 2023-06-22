@@ -3,6 +3,7 @@
   "displayName": "ExcelFormula",
   "description": "Syntax highlighting for Excel formulas.",
   "publisher": "Nurdoidz",
+  "repository": "https://github.com/Nurdoidz/xlformula",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.79.0"
